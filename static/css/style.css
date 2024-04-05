@@ -1,3 +1,5 @@
+
+
 body {
     background-color: white;
     margin: 0px;
@@ -26,6 +28,15 @@ body {
     font-size: 25px;
     color: #8aff75;
     margin-left: 25px;
+}
+
+.area{
+    
+    height: 500px;
+    background-image: url('../images/background3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }
 
 #paragLogo {
@@ -372,3 +383,5 @@ body {
         margin-right: 20px;
     }
 }
+
+
