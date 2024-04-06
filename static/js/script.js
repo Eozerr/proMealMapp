@@ -954,3 +954,10 @@ function deleteRow() {
     rowIndexMyPlate--;
 }
 
+document.getElementById("goToAbout").addEventListener("click", function (event) {
+    event.preventDefault();
+    const contactSection = document.getElementById("about");
+    const offset = 50; // Başlangıç yüksekliği
+    const targetPosition = contactSection.offsetTop - offset;
+    window.scrollTo({ top: targetPosition, behavior: "smooth" });
+});

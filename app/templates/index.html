@@ -3,7 +3,7 @@
 <html>
 
 <head>
-	<title>Planty</title>
+	<title>ProMealMapp</title>
 
 	<meta charset="UTF-8">
 	<meta name="description" content="Nutrition tracker">
@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Hind+Siliguri|Pattaya" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="planty_style.css">	
+
 </head>
 
 <body>
@@ -25,10 +25,10 @@
 	</div>
 
 	<nav id="navUl">
-		<ul id="ulNav">
-			<li class="liNav"><a class="aNav" href="">ABOUT</a></li>
-			<li class="liNav"><a class="aNav" href="">CONTACT</a></li>
-			<li class="liNav"><a class="aNav" href="">LOG IN</a></li>
+		<ul id="ulNav" style="padding-top: 10px;">
+			<li class="liNav"><a id="goToAbout" class="aNav" href="">ABOUT</a></li>
+			<li class="liNav"><a id="goToContact" class="aNav" href="">CONTACT</a></li>
+			<li class="liNav"><a id="goToLogin" class="aNav" href="">LOG IN</a></li>
 		</ul>
 	</nav>
 
@@ -37,10 +37,18 @@
 
 
 <main id="mainOne">
-	<div class="area" >
 
+	<div class="area" style="margin-top: 40px;"></div>
+	<div id="about"class="container" style="display: flex; height: 400px; margin-top: 100px; margin-bottom: 200px;">
+		<div class="md1" style="height: 300px; flex:1 ">
+			<img src="{% static 'images/about3.jpg' %}" alt="">
+		</div>
+		<div class="md2" style="height: 300px; flex:1">
+			<h3 style="text-align: center; font-size: 30px; padding-top: 50px;">ABOUT</h3>
+			<p style="font-size: 24px; padding-top: 25px; text-align: justify; padding-right: 25px; ">Welcome to our website dedicated to health and nutrition! Here, we believe that understanding your body's needs is essential for a balanced and fulfilling lifestyle. Our platform is designed to assist you in determining your daily vitamin, mineral, and calorie requirements based on your height, weight, and daily activities. Whether you're looking to maintain a healthy weight, boost your energy levels, or simply improve your overall well-being, we've got you covered. Additionally, you can easily track the nutritional content of your meals by inputting the foods you consume, helping you make informed dietary choices. Start your journey towards a healthier you today with our user-friendly tools and resources!</p>
+
+		</div>
 	</div>
-
 
 	<div id="divLogIn">
 		<h2>Log In To ProMealMapp</h2>
