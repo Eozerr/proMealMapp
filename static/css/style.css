@@ -1,3 +1,38 @@
+.inputs,
+.inputsDF,
+.inputsMyPlate {
+    margin: 8px;
+    color: #4f4d4b;
+    text-align: center;
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 20px; /* İki katı büyüklük */
+    padding: 16px; /* İki katı büyüklük */
+    width: 350px; /* İki katı büyüklük */
+    border: none;
+    border-radius: 5px;
+}
+
+.inputsDF {
+    margin: 30px; /* İki katı büyüklük */
+}
+
+.inputsMyPlate {
+    width: 100px; /* İki katı büyüklük */
+    margin: 0px;
+}
+
+.btns {
+    background-color: #ff758a;
+    box-shadow: 0px 16px 30px rgba(0, 0, 0, 0.3); /* İki katı büyüklük */
+    color: white;
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 26px; /* İki katı büyüklük */
+    font-weight: bold;
+    margin-top: 44px; /* İki katı büyüklük */
+    padding: 20px 40px; /* İki katı büyüklük */
+    border: none;
+    border-radius: 30px; /* İki katı büyüklük */
+}
 
 
 body {
