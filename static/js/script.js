@@ -572,6 +572,11 @@ const USERS_NUTRIENT_REQUIRMENTS = {
     }
 };
 
+// Sayfanın en altına kaydıran yardımcı işlev
+function scrollToBottom() {
+    window.scrollTo(0, document.documentElement.scrollHeight);
+}
+
 //Creating empty object for user's personal nutrient requirements
 let userNutReq = {}; 
 
@@ -586,7 +591,7 @@ function logIn() {
     }
     
     else {
-        scrollTo(0,0);
+        scrollToBottom();
         document.getElementById("divLogIn").style.display = "none";
         document.getElementById("divPersonalInfo").style.display = "block";
         document.getElementById("personalGreeting").innerHTML = "HI, " + name.toUpperCase() + "!";
@@ -638,7 +643,7 @@ function calculate() {
 
     //If the form is filled, calculate
     else {   
-        scrollTo(0,0);         
+        scrollToBottom();         
         document.getElementById("divPersonalInfo").style.display = "none";
         document.getElementById("divDailyRequirement").style.display = "block";
 
@@ -763,14 +768,14 @@ function calculate() {
 
 //Moving to divQuestion from 
 function next() {
-    scrollTo(0,0);
+    scrollToBottom();
     document.getElementById("divDailyRequirement").style.display = "none";
     document.getElementById("divQuestion").style.display = "block";  
 }
 
 //Moving to divFoodSelection
 function checkMyDay() {
-    scrollTo(0,0);
+    scrollToBottom();
     document.getElementById("divQuestion").style.display = "none";
     document.getElementById("divFoodSelection").style.display = "block";
 }
@@ -860,7 +865,7 @@ function tracking() {
     }
     
     else {
-        scrollTo(0,0);
+        scrollToBottom();
         document.getElementById("divFoodSelection").style.display = "none";
         document.getElementById("divNutritionTracker").style.display = "block";
     
@@ -942,7 +947,7 @@ function tracking() {
 
 //Returning to add more foods on daily food list
 function addMoreFood() {
-    scrollTo(0,0);
+    scrollToBottom();
     document.getElementById("divFoodSelection").style.display = "block";
     document.getElementById("divNutritionTracker").style.display = "none";
 }
