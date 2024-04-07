@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>ProMealMapp</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Nutrition tracker" />
+    <meta
+      name="keywords"
+      content="nutri tracker, nutrition tracker, nutrition, nutrients, app, daily requirements"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Abril+Fatface|Hind+Siliguri|Pattaya"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header id="headerOne">
+        {% include 'navbar.html' %}
+    </header>
+
+    <main id="mainOne" style="margin-top: 200px">
+		<div id="divLogIn">
+            <h2>Log In To ProMealMapp</h2>
+            <form id="formLogIn" method="post" action="{% url 'login' %}">
+                {% csrf_token %}
+                E-mail:
+                <input
+                    class="inputs"
+                    id="inputEmail"
+                    type="email"
+                    name="email"
+                    placeholder="Please enter your E-mail"
+                />
+                <br />
+                Password:
+                <input
+                    class="inputs"
+                    id="inputPassword"
+                    type="password"
+                    name="password"
+                    placeholder="Please enter your password"
+                />
+                <br />
+                <button class="btns" id="btnLogIn" type="submit">Log in</button>
+                <!-- Hata mesajını göstermek için -->
+                <p id="messageFillIn">{{ message }}</p>
+            </form>
+            <p>Don't have an account? <a href="{% url 'register' %}">Sign up now!</a></p>
+        </div>
+        
+		
+		
+		
+		
+    </main>
+
+    <footer id="footerOne">
+      <p>
+        &copy; 2024 &nbsp;<span id="spanFooter">ProMealMapp</span>.&nbsp;&nbsp;
+      </p>
+    </footer>
+
+    <script src="{% static 'js/script.js' %}"></script>
+  </body>
+</html>

@@ -16,11 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from app.views import index,calculate
+from app.views import index,calculate,register,login
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index'),
+    path('index', index, name='index'),
     path('calculate.html', calculate, name='calculate'),
     path('calculate', calculate, name='calculate'),
+    path('register/', register, name='register'),
+    path('login/', login, name='login'),  # Giriş için URL deseni
 ]

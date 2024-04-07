@@ -16,18 +16,7 @@
 
 <body>
 <header id="headerOne">	
-	<div id="divLogo">
-		<h2 id="headlineLogo">ProMealMapp</h2>
-		<p id="paragLogo">Your personal nutrition tracker</p>
-	</div>
-
-	<nav id="navUl">
-		<ul id="ulNav" style="padding-top: 10px;">
-			<li class="liNav"><a id="goToAbout" class="aNav" href="#about">ABOUT</a></li>
-			<li class="liNav"><a id="goToContact" class="aNav" href="#contact">CONTACT</a></li>
-			<li class="liNav"><a id="goToLogin" class="aNav" href="#getStarted">GET STARTED</a></li>
-		</ul>
-	</nav>
+	{% include 'navbar.html' %}
 	<style>
         /* İstediğimiz özel stiller */
         .custom-btn {
@@ -86,9 +75,15 @@
 	
 
 	<div style="text-align: center; margin-bottom: 200px;" id="getStarted">
-        <a href="calculate">
+        {% if user.is_authenticated %}
+        <a href="{% url 'calculate' %}">
             <button class="custom-btn">GET STARTED WITH PROMEALMAP</button>
         </a>
+    {% else %}
+        <a href="{% url 'login' %}">
+            <button class="custom-btn">GET STARTED WITH PROMEALMAP</button>
+        </a>
+    {% endif %}
     </div>
 	
 </main>

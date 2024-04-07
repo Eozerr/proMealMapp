@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>ProMealMapp</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Nutrition tracker">
+	<meta name="keywords" content="nutri tracker, nutrition tracker, nutrition, nutrients, app, daily requirements">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Hind+Siliguri|Pattaya" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+<header id="headerOne">	
+	{% include 'navbar.html' %}
+	<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        
+        form {
+            width: 300px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            text-align: center;
+        }
+        
+        label {
+            font-weight: bold;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</header>
+
+<h2>User Registration Form</h2>
+    <form method="post" action="{% url 'register' %}">
+        {% csrf_token %}
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br>
+        <label for="birth_date">Birth Date:</label><br>
+        <input type="date" id="birth_date" name="birth_date"><br><br>
+        <input type="submit" value="Register">
+    </form>
+
+
+<footer id="footerOne">
+	<p>&copy; 2024 &nbsp;<span id="spanFooter">ProMealMapp</span>.&nbsp;&nbsp;</p>
+	
+</footer>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>
