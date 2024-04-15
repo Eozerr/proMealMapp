@@ -959,30 +959,6 @@ function deleteRow() {
     rowIndexMyPlate--;
 }
 
-document.getElementById("goToAbout").addEventListener("click", function (event) {
-    event.preventDefault();
-    const contactSection = document.getElementById("about");
-    const offset = 50; // Başlangıç yüksekliği
-    const targetPosition = contactSection.offsetTop - offset;
-    window.scrollTo({ top: targetPosition, behavior: "smooth" });
-});
-
-document.getElementById("goToContact").addEventListener("click", function (event) {
-    event.preventDefault();
-    const contactSection = document.getElementById("contact");
-    const offset = 50; // Başlangıç yüksekliği
-    const targetPosition = contactSection.offsetTop - offset;
-    window.scrollTo({ top: targetPosition, behavior: "smooth" });
-});
-
-document.getElementById("goToStarted").addEventListener("click", function (event) {
-    event.preventDefault();
-    const contactSection = document.getElementById("getStarted");
-    const offset = 50; // Başlangıç yüksekliği
-    const targetPosition = contactSection.offsetTop - offset;
-    window.scrollTo({ top: targetPosition, behavior: "smooth" });
-});
-
 function redirectToIndex() {
     window.location.href = "/index.html";
 }

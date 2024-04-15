@@ -1,30 +1,24 @@
+<div id="divLogo">
+  <h2 id="headlineLogo">ProMealMapp</h2>
+  <p id="paragLogo">Your personal nutrition tracker</p>
+</div>
 
-    <div id="divLogo">
-      <h2 id="headlineLogo">ProMealMapp</h2>
-      <p id="paragLogo">Your personal nutrition tracker</p>
-    </div>
-  
-    <nav id="navUl">
-      <ul id="ulNav" style="padding-top: 10px">
-        <li class="liNav">
-          <a href="{% url 'index' %}" class="aNav">ABOUT</a>
-        </li>
-        <li class="liNav">
-          <a href="{% url 'index' %}" class="aNav">CONTACT</a>
-        </li>
-        {% if user.is_authenticated %}
-        <li class="liNav">
-          <a href="{% url 'logout' %}" class="aNav">LOG OUT</a>
-        </li>
-        {% else %}
-        <li class="liNav">
+<nav id="navUl">
+  <ul id="ulNav" style="padding-top: 10px">
+      <li class="liNav">
+          <a href="{% url 'index' %}" class="aNav" >HOME</a>
+      </li>
+      {% if request.session.is_authenticated %}
+      <li class="liNav">
+          <a href="{% url 'logout' %}" class="aNav" >LOG OUT</a>
+      </li>
+      {% else %}
+      <li class="liNav">
           <a href="{% url 'login' %}" class="aNav">LOG IN</a>
-        </li>
-        <li class="liNav">
+      </li>
+      <li class="liNav">
           <a href="{% url 'register' %}" class="aNav">REGISTER</a>
-        </li>
-        {% endif %}
-      </ul>
-    </nav>
-
-  
+      </li>
+      {% endif %}
+  </ul>
+</nav>
